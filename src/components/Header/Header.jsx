@@ -63,6 +63,12 @@ function Header() {
           >
             Atributos
           </button>
+          <button
+            className="header__nav-link"
+            onClick={() => scrollToSection('inventory-section')}
+          >
+            Caso Real
+          </button>
         </nav>
       </div>
     </header>
