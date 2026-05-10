@@ -1,0 +1,106 @@
+.scenarios-section {
+  padding: var(--space-3xl) 0;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scenarios-section--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scenarios-section__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.scenarios-section__badge {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  background: var(--color-bg-glass);
+  border: var(--border-subtle);
+  border-radius: 50px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  color: var(--color-accent-teal);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-md);
+}
+
+.scenarios-section__title {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+}
+
+.gradient-text-scenarios {
+  background: linear-gradient(135deg, var(--color-accent-teal), var(--color-accent-orange));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.scenarios-card {
+  background: var(--color-bg-secondary);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-base);
+}
+
+.scenarios-card:hover {
+  transform: translateY(-5px);
+}
+
+.scenarios-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.scenarios-card__header h3 {
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.scenarios-card__icon {
+  font-size: 1.5rem;
+}
+
+.scenarios-card--blue { border-top: 4px solid var(--color-accent-blue); }
+.scenarios-card--teal { border-top: 4px solid var(--color-accent-teal); }
+.scenarios-card--orange { border-top: 4px solid var(--color-accent-orange); }
+
+.scenario-item {
+  margin-bottom: var(--space-md);
+}
+
+.scenario-item__label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xs);
+}
+
+.scenario-item__desc {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .scenarios-grid { grid-template-columns: 1fr; }
+}

@@ -1,0 +1,152 @@
+/* ============================================
+   DESIGN SYSTEM - TOKENS & GLOBAL STYLES
+   Cloud Service Architectures Theme
+   ============================================ */
+
+:root {
+  /* Color Palette — Pastel & Light */
+  --color-bg-primary: #f8fafc;
+  --color-bg-secondary: #ffffff;
+  --color-bg-card: rgba(255, 255, 255, 0.8);
+  --color-bg-glass: rgba(0, 0, 0, 0.02);
+  --color-bg-glass-hover: rgba(0, 0, 0, 0.05);
+
+  --color-text-primary: #1e293b;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+
+  /* IaaS — Pastel Blue */
+  --color-accent-blue: #60a5fa;
+  --color-accent-blue-dark: #3b82f6;
+
+  /* PaaS — Pastel Teal */
+  --color-accent-teal: #2dd4bf;
+  --color-accent-teal-dark: #14b8a6;
+
+  /* SaaS — Pastel Orange */
+  --color-accent-orange: #fbbf24;
+  --color-accent-orange-dark: #f59e0b;
+
+  /* Utility accents - Pastel */
+  --color-accent-emerald: #34d399;
+  --color-accent-rose: #f87171;
+
+  /* Gradients - Soft Pastel */
+  --gradient-blue: linear-gradient(135deg, #93c5fd, #60a5fa);
+  --gradient-teal: linear-gradient(135deg, #99f6e4, #2dd4bf);
+  --gradient-orange: linear-gradient(135deg, #fcd34d, #fbbf24);
+  --gradient-hero: linear-gradient(135deg, #60a5fa 0%, #2dd4bf 50%, #fbbf24 100%);
+
+  /* Borders */
+  --border-subtle: 1px solid rgba(0, 0, 0, 0.08);
+  --border-glow-blue: 1px solid rgba(96, 165, 250, 0.3);
+  --border-glow-teal: 1px solid rgba(45, 212, 191, 0.3);
+  --border-glow-orange: 1px solid rgba(251, 191, 36, 0.3);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* Shadows */
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --shadow-glow-blue: 0 0 30px rgba(59, 130, 246, 0.15);
+  --shadow-glow-teal: 0 0 30px rgba(20, 184, 166, 0.15);
+  --shadow-glow-orange: 0 0 30px rgba(245, 158, 11, 0.15);
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Reset & Base */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Background animated gradient */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(59, 130, 246, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(20, 184, 166, 0.07) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(245, 158, 11, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+  animation: bgPulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes bgPulse {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+#root {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

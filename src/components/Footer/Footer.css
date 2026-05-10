@@ -1,0 +1,59 @@
+.footer {
+  margin-top: auto;
+  padding: var(--space-xl) var(--space-lg);
+  border-top: var(--border-subtle);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.footer__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer__content {
+  margin-bottom: var(--space-md);
+}
+
+.footer__logo {
+  display: inline-block;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-sm);
+}
+
+.footer__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.footer__divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 0, 0, 0.06),
+    transparent
+  );
+  margin: var(--space-md) 0;
+}
+
+.footer__credits {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.footer__heart {
+  color: var(--color-accent-rose);
+  display: inline-block;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}

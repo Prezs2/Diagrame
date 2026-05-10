@@ -1,0 +1,270 @@
+.comparison-card {
+  position: relative;
+  background: var(--color-bg-card);
+  border: var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  animation: cardSlideUp 0.6s ease forwards;
+  opacity: 0;
+  cursor: default;
+}
+
+@keyframes cardSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.comparison-card:hover {
+  transform: translateY(-8px);
+}
+
+.comparison-card--blue:hover {
+  box-shadow: var(--shadow-glow-blue);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+.comparison-card--teal:hover {
+  box-shadow: var(--shadow-glow-teal);
+  border-color: rgba(20, 184, 166, 0.2);
+}
+
+.comparison-card--orange:hover {
+  box-shadow: var(--shadow-glow-orange);
+  border-color: rgba(245, 158, 11, 0.2);
+}
+
+/* Glow Effect */
+.comparison-card__glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+  pointer-events: none;
+}
+
+.comparison-card:hover .comparison-card__glow {
+  opacity: 1;
+}
+
+.comparison-card__glow--blue {
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 60%);
+}
+
+.comparison-card__glow--teal {
+  background: radial-gradient(circle, rgba(20, 184, 166, 0.06) 0%, transparent 60%);
+}
+
+.comparison-card__glow--orange {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, transparent 60%);
+}
+
+/* Accent Bar */
+.comparison-card__accent {
+  height: 3px;
+  width: 100%;
+}
+
+.comparison-card__accent--blue {
+  background: var(--gradient-blue);
+}
+
+.comparison-card__accent--teal {
+  background: var(--gradient-teal);
+}
+
+.comparison-card__accent--orange {
+  background: var(--gradient-orange);
+}
+
+/* Content */
+.comparison-card__content {
+  position: relative;
+  z-index: 1;
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Icon */
+.comparison-card__icon-wrapper {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-md);
+  transition: transform var(--transition-base);
+}
+
+.comparison-card:hover .comparison-card__icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.comparison-card__icon-wrapper--blue {
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.comparison-card__icon-wrapper--teal {
+  background: rgba(20, 184, 166, 0.1);
+  border: 1px solid rgba(20, 184, 166, 0.2);
+}
+
+.comparison-card__icon-wrapper--orange {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.comparison-card__icon {
+  font-size: 28px;
+}
+
+/* Title & Subtitle */
+.comparison-card__title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-xs);
+}
+
+.comparison-card__subtitle {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  margin-bottom: var(--space-lg);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 50px;
+}
+
+.comparison-card__subtitle--blue {
+  color: var(--color-accent-blue);
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.comparison-card__subtitle--teal {
+  color: var(--color-accent-teal);
+  background: rgba(20, 184, 166, 0.08);
+}
+
+.comparison-card__subtitle--orange {
+  color: var(--color-accent-orange);
+  background: rgba(245, 158, 11, 0.08);
+}
+
+/* Features */
+.comparison-card__features {
+  list-style: none;
+  width: 100%;
+  margin-bottom: var(--space-lg);
+}
+
+.comparison-card__feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.comparison-card:hover .comparison-card__feature {
+  color: var(--color-text-primary);
+}
+
+.comparison-card__feature:last-child {
+  border-bottom: none;
+}
+
+.comparison-card__feature-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.comparison-card__feature-dot--blue {
+  background: var(--color-accent-blue);
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.4);
+}
+
+.comparison-card__feature-dot--teal {
+  background: var(--color-accent-teal);
+  box-shadow: 0 0 6px rgba(20, 184, 166, 0.4);
+}
+
+.comparison-card__feature-dot--orange {
+  background: var(--color-accent-orange);
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.4);
+}
+
+/* Stat */
+.comparison-card__stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding-top: var(--space-md);
+  border-top: var(--border-subtle);
+  width: 100%;
+}
+
+.comparison-card__stat-value {
+  font-size: var(--font-size-3xl);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.comparison-card__stat-value--blue {
+  color: var(--color-accent-blue);
+}
+
+.comparison-card__stat-value--teal {
+  color: var(--color-accent-teal);
+}
+
+.comparison-card__stat-value--orange {
+  color: var(--color-accent-orange);
+}
+
+.comparison-card__stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Animated Border Glow */
+.comparison-card__border-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+  pointer-events: none;
+}
+
+.comparison-card__border-glow--active {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .comparison-card__content {
+    padding: var(--space-lg);
+  }
+}
