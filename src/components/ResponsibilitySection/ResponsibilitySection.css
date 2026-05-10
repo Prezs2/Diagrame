@@ -48,32 +48,32 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   border: var(--border-subtle);
   margin: 0 auto var(--space-lg);
-  max-width: 900px;
+  width: fit-content;
+  min-width: 900px;
 }
 
 .responsibility-table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
 }
 
 .responsibility-table th {
-  background: rgba(0,0,0,0.02);
-  padding: var(--space-md) var(--space-lg);
+  background: rgba(0, 0, 0, 0.02);
+  padding: var(--space-lg);
   text-align: center;
   font-size: var(--font-size-sm);
   color: var(--color-text-primary);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .responsibility-table th:first-child {
   text-align: left;
-  width: 35%;
+  padding-left: var(--space-2xl);
 }
 
 .responsibility-table td {
-  padding: var(--space-md) var(--space-lg);
-  border-bottom: 1px solid rgba(0,0,0,0.03);
+  padding: var(--space-lg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
   font-size: var(--font-size-sm);
   text-align: center;
 }
@@ -82,16 +82,18 @@
   font-weight: 600;
   color: var(--color-text-primary);
   text-align: left !important;
+  padding-left: var(--space-2xl) !important;
+  padding-right: var(--space-3xl) !important;
 }
 
 .resp-badge {
   display: inline-block;
-  padding: var(--space-xs) var(--space-md);
+  padding: 4px 12px;
   border-radius: 50px;
   font-size: var(--font-size-xs);
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
-  min-width: 80px;
+  min-width: 90px;
 }
 
 .resp-badge--user {
@@ -126,10 +128,24 @@
   border-radius: 50%;
 }
 
-.legend-dot--user { background: var(--color-accent-blue); }
-.legend-dot--provider { background: var(--color-text-muted); opacity: 0.5; }
+.legend-dot--user {
+  background: var(--color-accent-blue);
+}
+
+.legend-dot--provider {
+  background: var(--color-text-muted);
+  opacity: 0.5;
+}
 
 @media (max-width: 768px) {
-  .resp-layer-name { width: 30%; }
-  .responsibility-table th, .responsibility-table td { padding: var(--space-sm); font-size: var(--font-size-xs); }
+  .responsibility-table-wrapper {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .responsibility-table th,
+  .responsibility-table td {
+    padding: var(--space-sm);
+    font-size: var(--font-size-xs);
+  }
 }

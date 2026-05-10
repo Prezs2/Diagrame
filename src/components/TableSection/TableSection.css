@@ -131,16 +131,19 @@
 }
 
 /* Technological Table (5 Columns) */
-.comparison-table--tech .comparison-table__th--feature { width: 20%; }
-.comparison-table--tech th { text-align: center; font-size: var(--font-size-xs); }
+.comparison-table--tech .comparison-table__th--feature { width: 22%; }
+.comparison-table--tech th { text-align: center; font-size: var(--font-size-sm); }
 .comparison-table--tech th.comparison-table__th--feature { text-align: left; }
 .comparison-table--tech td { 
-  padding: var(--space-sm) var(--space-xs); 
+  padding: var(--space-md) var(--space-xs); 
   text-align: center; 
-  font-size: var(--font-size-xs); 
+  font-size: var(--font-size-sm); 
 }
-.comparison-table--tech .comparison-table__td--feature { text-align: left; padding-left: var(--space-lg); }
-
+.comparison-table--tech .comparison-table__td--feature { 
+  text-align: left; 
+  padding-left: var(--space-lg); 
+  font-size: var(--font-size-sm); 
+}
 .comparison-table--tech .comparison-table__td--blue { color: var(--color-accent-blue-dark); }
 .comparison-table--tech .comparison-table__td--teal { color: var(--color-accent-teal-dark); }
 .comparison-table--tech .comparison-table__td--orange { color: var(--color-accent-orange-dark); }
