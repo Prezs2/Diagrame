@@ -4,53 +4,53 @@ import './TableSection.css'
 const technicalData = {
   headers: ['Atributo Técnico', 'On-Premises (CapEx)', 'IaaS', 'PaaS', 'SaaS'],
   rows: [
-    { 
-      feature: 'Control de Infraestructura', 
-      col1: 'Total (Hardware y Soft)', 
-      col2: 'Total (Servidores/Red)', 
-      col3: 'Parcial (Solo App)', 
-      col4: 'Nulo (Caja negra)', 
-      highlight: true 
+    {
+      feature: 'Personal  TI requerido',
+      col1: 'Alto',
+      col2: 'Medio',
+      col3: 'Bajo',
+      col4: 'Muy Bajo',
+      highlight: true
     },
-    { 
-      feature: 'Responsabilidad', 
-      col1: 'Total del Usuario', 
-      col2: 'Usuario (OS + App)', 
-      col3: 'Mixta (App)', 
-      col4: 'Proveedor (Todo)', 
-      highlight: false 
+    {
+      feature: 'Tiempo de implemetación',
+      col1: 'Largo',
+      col2: 'Medio',
+      col3: 'Rapido',
+      col4: 'Muy rapido',
+      highlight: false
     },
-    { 
-      feature: 'Escalabilidad', 
-      col1: 'Muy Limitada (Semanas)', 
-      col2: 'Manual / Programada', 
-      col3: 'Automática (PaaS)', 
-      col4: 'Invisible para usuario', 
-      highlight: true 
+    {
+      feature: 'Riesgo de obsolecencia',
+      col1: 'Alto',
+      col2: 'Medio',
+      col3: 'Bajo',
+      col4: 'Muy Bajo',
+      highlight: true
     },
-    { 
-      feature: 'Personalización', 
-      col1: 'Totalmente Libre', 
-      col2: 'Sin límites (OS)', 
-      col3: 'Limitada a la plataforma', 
-      col4: 'Mínima o Nula', 
-      highlight: false 
+    {
+      feature: 'Dependencia de internet',
+      col1: 'Baja',
+      col2: 'Alta',
+      col3: 'Alta',
+      col4: 'Total',
+      highlight: false
     },
-    { 
-      feature: 'Tiempo de despliegue', 
-      col1: 'Semanas / Meses', 
-      col2: 'Alto (Minutos/Horas)', 
-      col3: 'Bajo (Segundos/Min)', 
-      col4: 'Inmediato', 
-      highlight: true 
+    {
+      feature: 'Disponibilidad',
+      col1: 'Depende de la empresa',
+      col2: 'Alta',
+      col3: 'Muy alta',
+      col4: 'Muy alta',
+      highlight: true
     },
-    { 
-      feature: 'Mantenimiento', 
-      col1: 'Crítico (Manual)', 
-      col2: 'Complejo (Manual)', 
-      col3: 'Simplificado', 
-      col4: 'Transparente', 
-      highlight: false 
+    {
+      feature: 'Mantenimiento físico',
+      col1: 'A cargo de la empresa',
+      col2: 'A cargo del proveedor',
+      col3: 'A cargo del proveedor',
+      col4: 'A cargo del proveedor',
+      highlight: false
     },
   ]
 }
