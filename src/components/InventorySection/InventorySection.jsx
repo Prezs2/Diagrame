@@ -16,31 +16,31 @@ const totalOnPremise = inventoryData.reduce((acc, curr) => acc + curr.price, 0)
 
 const migrationAnalysis = [
   {
-    type: 'IaaS',
+    type: 'Migración Total a IaaS',
     icon: '📦',
-    recommendation: 'Recomendado para Srv-03 y Srv-04',
-    cost: 'Pago por uso ($1.2M - $1.8M COP /mes)',
-    savings: 'Ahorro de $15M en inversión inicial y $300k mensuales en luz.',
-    pros: 'Migración rápida de máquinas virtuales existentes sin cambios de código.',
+    recommendation: 'Infraestructura como Servicio',
+    cost: 'Gasto Mensual: $6.5M - $8M COP',
+    savings: 'Ahorro Inicial (CAPEX): $57M COP',
+    pros: 'Control total del sistema operativo. Es la opción más parecida a tener los servidores físicos pero en la nube. Requiere personal técnico para parches y seguridad.',
     color: 'blue'
   },
   {
-    type: 'PaaS',
+    type: 'Migración Total a PaaS',
     icon: '🚀',
-    recommendation: 'Ideal para Srv-01 y Srv-02',
-    cost: 'Suscripción gestionada ($2.2M - $3.5M COP /mes)',
-    savings: 'Ahorro de $21M iniciales y 40 horas/mes de soporte técnico.',
-    pros: 'Cero mantenimiento de parches, backups automáticos y escalado elástico.',
+    recommendation: 'Plataforma como Servicio',
+    cost: 'Gasto Mensual: $9M - $11M COP',
+    savings: 'Ahorro Operativo: 80% en horas de mantenimiento técnico.',
+    pros: 'El proveedor gestiona SO y Bases de Datos. Te olvidas de virus, actualizaciones y fallos de disco. Es la opción más equilibrada en costo/beneficio.',
     color: 'teal',
     recommended: true
   },
   {
-    type: 'SaaS',
-    icon: '☁️',
-    recommendation: 'Excelente para Srv-05',
-    cost: 'Suscripción por Licencia (~$1.5M COP /mes)',
-    savings: 'Ahorro de $8.9M iniciales y riesgo nulo de pérdida de datos.',
-    pros: 'Colaboración en tiempo real, búsqueda inteligente y seguridad integrada.',
+    type: 'Migración Total a SaaS',
+    icon: '💎',
+    recommendation: 'Software como Servicio',
+    cost: 'Gasto Mensual: $14M+ COP',
+    savings: 'Ahorro Total: Cero inversión en desarrollo o mantenimiento.',
+    pros: 'Soluciones listas para usar (ej. ERP en la nube, OneDrive). Es la más cara pero elimina por completo la necesidad de servidores o código propio.',
     color: 'orange'
   }
 ]
